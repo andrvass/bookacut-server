@@ -1,0 +1,18 @@
+{
+  "mongodb": {
+    "host": "localhost",
+    "port": 27017,
+    "url": "mongodb://bookacut-dbuser:bookacut-dbuser!!@localhost:27017/bookacut",
+    "database": "bookacut",
+    "password": "bookacut-dbuser!!",
+    "name": "mongodb",
+    "user": "bookacut-dbuser",
+    "connector": "mongodb"
+  },
+  "db": {
+    "name": "db",
+    "localStorage": "",
+    "file": "",
+    "connector": "memory"
+  }
+}
