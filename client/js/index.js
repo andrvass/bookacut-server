@@ -1,21 +1,20 @@
 angular.module('core', ['lbServices']).
-  // The $user service represents the currently logged in user 
-  // and the `User` argument is defined in the lbServices module generated for you
+  // The $user service represents the currently logged in user
   factory('$user', function(User) {
-    var userService = {};
- 
+    var ret = {};
+
     // This function reloads the currently logged in user
-    userService.load = function() {
+    ret.load = function() {
       User.findById({ id: 'me' }, function(v) {
-        userService.data = v;
+        ret.data = v;
       });
     };
- 
-    userService.load();
- 
-    return userService;
+
+    ret.load();
+
+    return ret;
   }).
-  // Declare the user menu directive
+  //Declare the user menu directive
   directive('userMenu', function() {
     return {
       templateUrl: 'templates/user_menu.html',
